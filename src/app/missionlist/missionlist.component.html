@@ -1,0 +1,10 @@
+<div style="padding-bottom: 20px">
+    <h1 style="margin: 35px 15px; font-size: 36px">SpaceX Mission Launch List</h1>
+    <div *ngFor="let mission of missions" style="margin: 15px">        
+        {{ mission.mission_name }}
+        {{ mission.launch_year }}
+        <img image src="{{ mission.links.mission_patch_small }}" />
+        {{ mission.details }}
+        <a button color="primary" routerLink="/{{ mission.flight_number }}">View details</a>
+    </div>
+</div>
